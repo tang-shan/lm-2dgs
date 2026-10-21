@@ -54,7 +54,15 @@
     <h2 id="abstract-title">Abstract</h2>
     <div class="abstract">
       <!-- 请将下一段替换为你的论文摘要 -->
-      <p>[Insert your paper abstract here.]</p>
+      <p>Recent Gaussian splatting-based inverse rendering methods have demonstrated strong performance in jointly recovering geometry, materials, and illumination from posed images.
+Although existing approaches support material editing
+by directly modifying per-Gaussian material parameters,
+ambiguities in material--lighting decomposition can
+limit the accuracy of the recovered materials and
+subsequent editing results. In particular, roughness and metallicity remain poorly disentangled on Lambertian or dielectric surfaces with weak gradient supervision. To address this issue, we propose Latent Manifold Constrained 2D Gaussian Splatting (LM-2DGS), a physically-based inverse rendering framework for controllable material editing. Instead of independently optimizing material parameters for each Gaussian, LM-2DGS represents BRDF parameters on a continuous latent material manifold, where material properties are decoded as convex combinations of learnable material prototypes. This formulation introduces a shared material prior
+across Gaussians and supports scene-level editing
+through explicit adjustment of albedo, roughness,
+and metallicity. To support physically-based illumination evaluation, we integrate a polygonal-bounded differentiable ray tracing formulation tailored for planar 2D Gaussian surfels, reducing redundant ray--primitive intersections during BVH traversal while maintaining rendering fidelity. Experiments on existing inverse rendering benchmarks show improved relighting and material estimation performance compared with previous Gaussian-based inverse rendering methods. To quantitatively evaluate parameterized BRDF editing, we construct MatEditBench, a synthetic benchmark with controllable material variations.</p>
     </div>
     <!-- 摘要下方的展示图：将图片放在 static/images/teaser.jpg，或修改 src -->
     <figure style="margin-top: 28px;">
