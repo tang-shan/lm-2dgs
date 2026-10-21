@@ -1,520 +1,775 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+%% 
+%% Copyright 2019-2024 Elsevier Ltd
+%% 
+%% This file is part of the 'CAS Bundle'.
+%% --------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.3c of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'CAS Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for cas-dc documentclass for 
+%% double column output.
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+\documentclass[a4paper,fleqn]{cas-dc}
 
+% If the frontmatter runs over more than one page
+% use the longmktitle option.
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
-</head>
-<body>
+%\documentclass[a4paper,fleqn,longmktitle]{cas-dc}
+
+%\usepackage[numbers]{natbib}
+%\usepackage[authoryear]{natbib}
+\usepackage[authoryear,longnamesfirst]{natbib}
+\usepackage{stfloats}
+\usepackage{algorithmic}
+\usepackage{amsmath,amsfonts}
+\usepackage{array}
+
+%%%Author macros
+\def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
+\tsc{WGM}
+\tsc{QE}
+%%%
+
+% Uncomment and use as if needed
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newdefinition{rmk}{Remark}
+%\newproof{pf}{Proof}
+%\newproof{pot}{Proof of Theorem \ref{thm}}
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+% Short title
+\shorttitle{}    
+
+% Short author
+\shortauthors{}  
+
+% Main title of the paper
+\title [mode = title]{Art Creator: Steering Styles in Diffusion Model}  
+
+% Title footnote mark
+% eg: \tnotemark[1]
+\tnotemark[1] 
+
+% Title footnote 1.
+% eg: \tnotetext[1]{Title footnote text}
+\tnotetext[1]{} 
+
+% First author
+%
+% Options: Use if required
+% eg: \author[1,3]{Author Name}[type=editor,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%       prefix=Sir,
+%       orcid=0000-0000-0000-0000,
+%       facebook=<facebook id>,
+%       twitter=<twitter id>,
+%       linkedin=<linkedin id>,
+%       gplus=<gplus id>]
+
+\author[1]{Shan Tang}%[<options>]
+%%\ead{tangshan@mail.ynu.edu.cn}
+\author[1]{Wenhua Qian}%[]
+% Corresponding author indication
+\cormark[1]
+\ead{whqian@ynu.edu.cn}
+\author[1]{Peng Liu}%[]
+%%\ead{pengliu0606@gmail.com}
+% Address/affiliation
+\affiliation[1]{organization={School of Information, Yunnan University},
+            addressline={South Section, East Outer Ring Road, Chenggong District}, 
+            city={Kunming},
+%          citysep={}, % Uncomment if no comma needed between city and postcode
+            postcode={650500}, 
+            state={Yunnan},
+            country={China}}
+
+\author[2]{Jinde Cao}%[]
+%%\ead{jdcao@seu.edu.cn}
+% Address/affiliation
+\affiliation[2]{organization={School of Mathmatics, Southeast University},
+            addressline={Sipailou Campus, Nanjing, Jiangsu Province}, 
+            city={Nanjing},
+%          citysep={}, % Uncomment if no comma needed between city and postcode
+            postcode={210096}, 
+            state={Jiangsu},
+            country={China}}
+
+% Corresponding author text
+\cortext[1]{Corresponding author}
+% Footnote text
+\fntext[1]{}
+
+% For a title note without a number/mark
+%\nonumnote{}
+
+% Here goes the abstract
+\begin{abstract}
+Large-scale text-to-image (T2I) generative models are extensively used in the art and creative industries because of their remarkable capability in generating high-quality images. The generation of ideal images in a single attempt is nearly impossible, necessitating complex and precise post-image editing. However, stylization pose significant challenges in post-editing. In this context, we introduce the Art Creator, which facilitates style controls based on a simple description or a single image. Art Creator enables nuanced image style edits, alterations in painting materials, colors, and brushstrokes, and understanding of high-level attributes such as object shapes. Furthermore, we manually annotated and released a dataset named ChinArt, comprising over 20,000 eastern artworks, aiming to address the gap in the global art creation domain. We showcase the quality and efficiency of our method across various art style creations. 
+\end{abstract}
+
+% Use if graphical abstract is present
+%\begin{graphicalabstract}
+%\includegraphics{}
+%\end{graphicalabstract}
+
+% Research highlights
+\begin{highlights}
+\item Proposal of \emph{Art Creator}, an efficient zero-shot stylization method for Text-to-Image (T2I) models.
+\item Proposal of Adaptive Conditional Control to preserve the content structure and ensure reasonable gradient directions.
+\item Introduction of the \emph{ChinArt} dataset, comprising over 20,000 labeled eastern artworks.
+\item We demonstrated the effectiveness of our method in achieving superior performance in content preservation and style transfer compared to other state-of-the-art algorithms.
+\end{highlights}
+
+%\nocite{*}
+
+% Keywords
+% Each keyword is seperated by \sep
+\begin{keywords}
+ Image edit \sep Style transfer \sep Text to image \sep Diffusion model
+\end{keywords}
+\maketitle
+
+\begin{figure*}[htbp]
+\centerline{\includegraphics[width=\linewidth]{fig1.pdf}}
+\caption{The framework of our proposed method}
+\label{fig}
+\end{figure*}
+
+\section{Introduction}
+In 2022, the Colorado State Fair gained attention when it inadvertently granted first place to an artwork generated with the assistance of artificial intelligence. The creator, Allen, used Midjourney by inputting different phrases, producing over 900 renderings for his selection. From these, he picked three favorites and further refined them in Photoshop. To enhance resolution, he employed super-resolution reconstruction before printing the final compositions on canvas.
+
+In the past two years, diffusion-based large-scale text-to-image generative models have made substantial advances, including Imagen (\cite{DBLP:conf/nips/SahariaCSLWDGLA22}), DALL·E 2 (\cite{DBLP:journals/corr/abs-2204-06125}), Parti (\cite{DBLP:journals/tmlr/YuXKLBWVKYAHHPLZBW22}) and Stable Diffusion (\cite{DBLP:conf/cvpr/RombachBLEO22}). These models have shown remarkable semantic and compositional generative capabilities, attracting a lot of attention from both the research community and the public, particularly in the art and design industries. However, understanding the learned concepts during their training and influencing their output accurately is an ongoing challenge. Achieving an one-shot text-to-image generation is deemed impractical due to this complexity. Consequently, text-guided image generation is recognized as a highly iterative process.
+
+In spite of the formidable generative capacity exhibited by Text-to-Image (T2I) models, their application in the creation of artworks is not without challenges. Firstly, these large-scaled T2I models exhibit a deficiency in interpretive nuance. This inadequacy is particularly evident in the realm of intricate and culturally enriched art forms, such as Chinese arts. Secondly, a significant portion of editing techniques (\cite{DBLP:journals/corr/abs-2201-09865, DBLP:journals/corr/abs-2304-03246,DBLP:journals/corr/abs-2311-17957,DBLP:journals/corr/abs-2312-14091, DBLP:journals/corr/abs-2212-00932, DBLP:conf/iclr/MengHSSWZE22, DBLP:conf/cvpr/AvrahamiHGGTPLF23})  mainly focuses on modifying content structures, involving actions such as object removal or alteration of specific image segments. Most of these methods are struggle in preserving the detail and accuracy of the original input image. (\cite{DBLP:journals/corr/abs-2212-06013,DBLP:conf/eccv/LiuLDTT22,DBLP:conf/iclr/HertzMTAPC23}). Lastly, a large portion of stylization methods in diffusion models require extra example-based training (\cite{DBLP:conf/cvpr/MokadyHAPC23,DBLP:journals/tog/ValevskiKMSML23}), which limits its generalization ability.
+
+Artistic style transfer is a technique that applies desired artistic styles to content images, creating new artistic images. There are two main types of methods: neural style transfer and pre-trained large-scale model-based methods. Neural style transfer train a feed-forward network to learn style representation from art datasets. While they can preserve the content structure, they often fail to capture deep style features and can introduce unwanted patterns and artifacts. On the other hand, pre-trained large-scale models, using the knowledge from T2I models, can produce more realistic images. Recently, some methods use text prompts or example style images to guide the creation of stylized images. While these methods can generate more realistic results, they often have difficulties preserving the structure of the original content. Additionally, these pre-trained large-scale models often require training on a specific set of artworks, which limits their use in industry.
+
+We present Art Creator, a novel method for stylizing images through the prompt of the desired style or example images. This approach adeptly preserves semantic details while modifying the visual aspects of the input, such as colors, brush strokes, and textures. Our method includes two parts: fine-tuning and sampling. For the fine-tuning part, The diffusion-based T2I model underwent a fine-tuning process using both the WikiArt (\cite{wikiart}) dataset and our proposed ChinArt dataset. This finetuned model exhibits an enhanced capacity to comprehend intricate style descriptions, such as art genre and artist information. It is noteworthy that Art Creator distinguishes itself through its singular ability to generate diverse eastern art style paintings, including but not limited to Dunhuang frescos, ink and wash painting, and claborate-style painting. The process of sampling involves two modules. The first module is Adaptive Conditional Control (ACC). This is achieved by incorporating an style condition in the latent space of the Diffusion model. ACC is proficiency in selectively preserving specific details, thereby facilitating a nuanced transfer of both stylistic and geometric attributes. The second module is Texture Enhance Module (TEM). Using a contrastive loss function between the generated sample and the edited prompt, TEM enhances images with detailed textures in a zero-shot manner.
+
+Our primary contributions can be summarized as follows:
+\begin{itemize}
+    \item Proposal of \emph{Art Creator}, an efficient zero-shot stylization method for Text-to-Image (T2I) models.
+    \item Proposal of Adaptive Conditional Control to preserve the content structure and ensure reasonable gradient directions.
+    \item  Introduction of the \emph{ChinArt} dataset, comprising over 20,000 labeled eastern artworks.
+    \item We showcased the superior performance of our approach in achieving remarkable performance in content preservation and style transfer compared to other state-of-the-art algorithms.
+\end{itemize}
+Our code and data are accessible on \url{https://github.com/tang-shan/Art-Creator}.
 
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+\begin{figure*}[!htbp]
+\centerline{\includegraphics[width=\linewidth]{fig2.pdf}}
+\caption{Examples of ChinArt Dataset}
+\label{fig}
+\end{figure*}
 
 
 
+\section{Related Work}
+\subsection{Text-to-Image Diffusion}
+While Generative Adversarial Networks (GANs) (\cite{DBLP:conf/cvpr/IsolaZZE17,DBLP:conf/iccv/ZhuPIE17,DBLP:conf/cvpr/KarrasLA19,DBLP:conf/cvpr/KarrasLAHLA20,DBLP:conf/cvpr/ChoiUYH20,DBLP:journals/tog/SongLLMLZC21}) and Autoregressive (AR) models (\cite{DBLP:conf/nips/BrownMRSKDNSSAA20,radford2019language,radford2018improving}) have shown text-to-image (T2I) capabilities in the past years, their image generation often focuses on specific domains rather than diverse open-world sets. In contrast, diffusion models have recently demonstrated its power in generating varied high-quality images. For instance, GLIDE (\cite{nichol2021glide}) has introduced a cascaded diffusion structure for image generation and editing. DALL-E2 (\cite{DBLP:journals/corr/abs-2204-06125}) proposes a multi-stage model involving CLIP-based (\cite{radford2021learning}) text encoding, image decoding, and upsampling. VQ-Diffusion (\cite{gu2022vector}) explores T2I diffusion models within the discrete latent space of VQ-VAE (\cite{van2017neural}). Stable Diffusion (\cite{DBLP:conf/cvpr/RombachBLEO22}) investigates the diffusion process across the latent space, enhancing both training and sampling efficiency without compromising image quality. 
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
+These generative models work by adding Gaussian noise in a forward Markov chain process. Then, a trained network is employed to gradually remove the noise and create clean samples. In particular, DDPM (\cite{DBLP:conf/nips/HoJA20}) directly obtains samples $z_t$ from the initial state $z_0$ by introducing Gaussian noise based on $\alpha_t \in (0,1)$  at each time step $t$ within the interval $[1, ..., T]$.
 
+\begin{equation}
+   z_t=\sqrt{\overline{\alpha}_t}z_0+\sqrt{1-\overline{\alpha}_t}\epsilon 
+\end{equation}
+where $\epsilon \sim \mathcal N(0,I)$, $\overline{\alpha}_t = \prod_{i=0}^t \alpha_i$. 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
+The DDIM (\cite{DBLP:conf/iclr/SongME21}) reverse sampling process is given by:
 
+\begin{equation}
+\begin{split}
+x_s=\sqrt{\overline{\alpha}_s}\frac{z_t-\sqrt{1-\overline{\alpha}_t}\epsilon_\theta(z_t,t)}{\overline{\alpha}_t}\\+\sqrt{1-\overline{\alpha}_s-\sigma_t^2}\epsilon_\theta(z_t,t)+\sigma_t^2 \epsilon
+\end{split}
+\end{equation}
 
+The neural network $\epsilon_\theta(z_t,t)$ is employed to predict the noise, serving as a score function with a scaling factor. $\sigma_t$ represents the noise variance, influencing the stochastic of the sampling process. In our study, we set $\sigma_t=0$ to remove randomness from the DDIM sampling procedure.
 
+Classifier-free Guidance (CFG) is a technique used to balance the quality and variety of samples produced by a diffusion model. In practice, it involves training the model for both conditional and unconditional denoising.During inference, the two score estimates are combined. By increasing a guidance scale $w \geq 1$, the adjusted score estimate $\overline \epsilon_\theta(z_t,t,y)$ is extrapolated in the direction towards the conditional score $\epsilon_\theta(z_t,t,y)$ and away from the unconditional score $\epsilon_\theta(z_t,t)$ where $y$ represents the prompt.
 
+\begin{equation}
+\overline \epsilon_\theta(z_t,t,y)=(w+1)\epsilon_\theta(z_t,t,y)-w\epsilon_\theta(z_t,t)
+\end{equation}
 
+\subsection{Style Transfer}
+Style transfer involves transforming the style of an image into another one while maintaining its content semantic. In recent years, both GAN-based (Generative Adversarial Network) (\cite{DBLP:conf/cvpr/Wang0ZTKC18,DBLP:conf/icmcs/ZhuangY21,DBLP:journals/corr/abs-2005-07702,DBLP:conf/eccv/ChongF22,DBLP:conf/isica/ChenLC19}) and CNN-based (Convolutional Neural Network) methods (\cite{DBLP:conf/iccv/HuangB17,DBLP:conf/nips/LiFYWLY17,DBLP:conf/iccv/LiuLHLWLSLD21,DBLP:conf/cvpr/ParkL19,DBLP:conf/eccv/WuZDB22,DBLP:journals/corr/abs-2201-02233}) have been developed. GAN-based approaches are often constrained to a specific domain. For example, CartoonGAN (\cite{DBLP:conf/cvpr/ChenLL18}) can only generate cartoon style images and AnimeGAN (\cite{DBLP:conf/isica/ChenLC19}) is restricted to animation style. CNN-based methods have achieved success in transferring color and texture, but it struggles with more intricate style attributes, such as geometry and shape. 
 
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+Recently, the development of large-scale Text-to-Image (T2I) models has led to the creation of many pre-trained large-scale model-based style transfer methods. ArtBank (\cite{DBLP:conf/aaai/ZhangZXLZSLLHL24}) introduced an Implicit Style Prompt Bank (ISPB) to learn and store knowledge from a set of artworks, while LSAST\cite{DBLP:conf/ijcai/ZhangZL0MHXLL0Z24} proposed a Step-aware and Layer-aware Prompt Space to dynamically regulate the content structure and style of input images. Although these pre-trained diffusion based artistic style transfer methods can create highly realistic stylized images, their training is time-consuming.
 
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
+\subsection{Diffusion-based Image Editing Methods}
+In recent years, the advancement of Text-to-Image (T2I) models has significantly boosted the progress of Diffusion-based image editing methods (\cite{DBLP:journals/corr/abs-2204-06125,DBLP:conf/iclr/MengHSSWZE22}). These techniques involve modifying the sampling process of a pre-trained T2I generator, requiring minimal or no additional training of the networks. For instance, the Prompt-to-Prompt (P2P) method introduced by \cite{DBLP:conf/iclr/HertzMTAPC23}
+edits images through cross-attention control. Another approach, Composable Diffusion (CompDiff), proposed by \cite{DBLP:conf/eccv/LiuLDTT22}, focuses on compositional visual generation using diffusion models. Additionally, \cite{DBLP:journals/corr/abs-2212-06013} presented Stable Artist, a method that offers artistic control by guiding the diffusion process in different semantic directions. Stylization is regarded as one type of edition. Nevertheless, these image editing techniques often lack precise control over specific semantic regions and struggle to transfer detailed textures and brush strokes. Furthermore, they do not facilitate image-to-image translation.  
 
+\begin{figure*}[!htbp]
+\centerline{\includegraphics[width=\linewidth]{fig3.pdf}}
+\caption{An overview of the proposed score distillation based fine-tune method}
+\label{fig}
+\end{figure*}
 
+\begin{table}
+\begin{center}
+\caption{Comparison with WikiArt Dataset}
+\label{tab1}
+\begin{tabular}{p{5.2cm} r{1.5cm} r{1.5cm}}
+\hline
+ & WikiArt & ChinArt \\
+\hline
+Number of 
+Chinese Artists & 51 & 112\\
+\hline
+Number of Labeled Chinese Artworks & 1,437 & 21,762 \\
+\hline
+Labelled by Painting Tools & No & Yes \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
+\section{Method}
+The framework of our method is presented in Figure 1. It includes three parts: Score Distillation based Fine-tune (SDFT), Adaptive Conditional Control (ACC) and Texture Enhance Module (TEM). First, the diffusion model is fine-tuned using labeled art datasets, including the WikiArt (\cite{wikiart}) dataset and our proposed ChinArt dataset. Then, stylization is applied to images generated by the refined model through a diffusion reverse sampling process.
+
+Let $I$ denote an image generated by the fine-tuned Stable Diffusion model with the text prompt $y_c$. The object of stylization is editing the input image by the style condition $y_s$, resulting in a stylized image $I^*$.The sampling process encompasses two key modules: Adaptive Conditional  Control (ACC), which adjusts the overall appearance based on the style condition, and Texture Enhancement Module (TEM)
+adds texture details to the generated image. Both steps can be done in a single sampling process.
+
+\subsection{ChinArt Dataset}
+The ChinArt dataset contains a total of 43,077 images, some of them are manually selected from image websites, some of them are collected from offline exhibitions, others are obtained through Google and Baidu searches to enhance dataset diversity. Each image undergoes manual labeling, including details such as art genre, artist name, and painting tools, etc. The dataset is categorized into two classes.
+
+\begin{figure}[!htbp]
+\centerline{\includegraphics[width=\columnwidth]{fig4.pdf}}
+\caption{The visualization of how $K$ varies in ACC module}
+\label{fig}
+\end{figure}
+
+\begin{itemize}
+\item Western Painting (5 types, 17,811 in total): sketch, oil painting, watercolor painting, color pencil painting and pen drawing.
+\item Eastern Painting (7 types, 25,266 in total): claborate-style painting, ink and wash painting, Dunhuang frescoes, line drawing, Thangka, traditional new year pictures and Ukiyoe.
+\end{itemize}
 
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+In comparison to the WikiArt dataset, the ChinArt dataset encompasses a larger collection of Chinese artworks, including pieces representing a broader range of traditional Chinese painting styles. A detailed comparison is provided in Table 1. Examples of ChinArt dataset is shown in Figure 2. 
 
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+\subsection{Score Distillation based Fine-tune}
+Some approaches have been used for fine-tuning the diffusion model, including hypernetworks (\cite{DBLP:journals/corr/HaDL16}), LoRA (\cite{DBLP:conf/iclr/HuSWALWWC22}), and LyCORIS (\cite{DBLP:journals/corr/abs-2309-14859}). These techniques are commonly employed to generate a specific style. After training the model with only a few reference images (often from a few to hundreds), it can produce images with similar stylistic characteristics. However, these methods pose challenges for our fine-tuning task, primarily due to the extensive size of our dataset, exceeding 110,000 images, making it hard to effectively learn with a limited number of parameters. An alternative approach involves training the entire U-Net network, but this method meets difficulties in avoiding catastrophic forgetting as the training epoch progresses. The introduction of new data leads to a degradation in performance on previously learned patterns. 
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+We present a new fine-tuning method called Score Distillation based Fine-tune (SDFT) (\cite{DBLP:conf/iclr/PooleJBM23}). Figure 3 shows an overview of this approach. The training data for SDFT comes from two sources: the Laion Dataset (\cite{DBLP:conf/nips/SchuhmannBVGWCC22}) and the Art Dataset (WikiArt and ChinArt).  The Laion-5B dataset has been used to train large T2I models like Stable Diffusion and Imagen. Our method uses alternating training techniques to balance learning new information while preserving what the model has already learned. During the art data training steps, art images are passed through a pre-trained image caption model (BLIP2) to get a description of the content, 
+then combined with the style description provided by the art dataset label to generate the final prompt for the artwork. This image-text pair is used to train the diffusion model.  For the Laion data training steps, we use a pre-trained diffusion model as a teacher to guide the learning process. The teacher model is frozen. The goal is to minimize the Kullback-Leibler (KL) divergence (\cite{1951Leibler}) between scores predicted by the teacher model and the student model, helping to prevent catastrophic forgetting. In practice, we performed $N$ rounds of Laion data training followed by one round of Art data training. Section 6.2.1 provides detailed pseudocode for SDFT.
 
-    <!-- End of Statcounter Code -->
+The loss function is given by:
+\begin{equation}
+L_{SD}=KL(p_{\theta_1}(z_t|z_{t-1},y)||p_{\theta_2}(z_t|z_{t-1},y))
+\end{equation}
 
-  </body>
-  </html>
+In the equation, $p_{\theta_1}(z_t|z_{t-1},y)$ is the conditional probability density of the teacher model, and $p_{\theta_2}(z_t|z_{t-1},y)$ represents the conditional probability density of the student model. In Section 6.1.1, we demonstrate that this involves the gradient derivation of the probability density, which corresponds to the learned score functions from the diffusion model.
+
+\begin{equation}
+L_{SD}=\frac{(1-\alpha_t)^2}{\alpha_t(1-\overline \alpha_t)}||\epsilon_{\theta_1}(z_t,t,y)-\epsilon_{\theta_2}(z_t,t,y)||_2^2
+\end{equation}
+
+\begin{figure*}[!h]
+    \centerline{\includegraphics[width=\linewidth]{fig5.pdf}}
+\caption{Art Creator enables artistic creation through fine-tuning and 
+ zero-shot sampling. It allows users to incorporate various artistic styles without the need for retraining. Users can control style through many flexible ways, such as painting tool ('Crayon', 'Pen' and 'drawing'),  artist name ('Monet','Picasso' and 'Kandinsky') and art style ('Cubism','Ukiyoe','Pop art').}
+\label{fig}
+\end{figure*}
+
+\subsection{Adaptive Conditional Control}
+The core concept behind Adaptive Conditional Control (ACC) is to impact the diffusion process by employing two prompts: one for content and another for style. To delve into ACC, we'll begin by considering a single direction in classifier-free guidance.
+\begin{equation}
+p(z_{t-1}|z_t,y) \propto p(z_{t-1}|z_t)p(y|z_t)^w
+\end{equation}
+The distribution 
+$p(z_{t-1}|z_t,y)$ is the distribution of $z_{t-1}$ conditioned on $y$,
+$p(z_{t-1}|z_t)$ is unconditional distribution. $p(y|z_t)$ is the class distribution. $w$ is the guidance scale. The noise predicted by the classifier-free guidance in one direction is:
+\begin{equation}
+\overline \epsilon_\theta(z_t,t,y)=(w+1)\epsilon_\theta(z_t,t,y)-w\epsilon_\theta(z_t,t)
+\end{equation}
+$\epsilon_\theta(z_t,t)$ is the unconditioned score estimate and $\epsilon_\theta(z_t,t,y)$ is the the conditioned estimate.
+
+We are now prepared to progress from employing a single direction to considering two concepts, specifically content and style control.
+
+\begin{equation}
+p(z_{t-1}|z_t,y_c,y_s) \propto p(z_{t-1}|z_t)p(y_c|z_{t})^\alpha p(y_s|z_t)^\beta
+\end{equation}
+
+where $y_c$ is the content condition and $y_s$ is the style condition. $\alpha$ and $\beta$ are guidance scales for content and style control. 
+
+The noise predicted by the classifier-free guidance in this two direction is:
+
+\begin{equation}
+    \epsilon_\theta(z_t,t,y_c,y_s)=(1-\alpha-\beta)\epsilon_\theta(z_t)+\alpha\epsilon_\theta(z_t,t,y_c)
+    +\beta\epsilon_\theta(z_t,t,y_s)
+\end{equation}
+
+Some diffusion-based image editing approaches, such as DreamStyler and Stable Artist, rely on above multiple condition guidance. (\cite{DBLP:conf/eccv/LiuLDTT22,DBLP:journals/corr/abs-2212-06013,DBLP:conf/cvpr/BrooksHE23,DBLP:conf/aaai/AhnLLKKNH24})}. However, we find that maintaining content structure proves challenging with this simplistic multiple-directional control. In practice, $p(z_{t-1}|z_t,y_c,y_s)$ is the product of three elements:$p(z_{t-1}|z_t)$,$p(y_c|z_{t})$ and $p(y_s|z_{t})$. The scale factors $\alpha$ and $\beta$ enhance the sharpness of the distributions. The distribution $p(z_{t-1}|z_t,y_c,y_s)$ becomes poorly conditioned when any of the three distributions in its low-density regions. This scenario is likely when there is a significant disparity between the content and style prompts or when textual inversion methods (\cite{DBLP:conf/iclr/GalAAPBCC23}) are utilized to obtain the style prompt. 
+
+To preserve the content structure and ensure a reasonable gradient direction, our strategy involves guiding the diffusion model through Adaptive Conditional Control (ACC).
+
+\begin{equation}
+p(z_{t-1}|z_t,y_c,y_s) \propto p(z_{t-1}|z_t)p(y_c|z_{t})^\alpha p(y_s|z_t)^{\beta K(z_t,y_c,y_s)}
+\end{equation}
+
+$K(z_t,y_c,y_s)$ is the adaptive factor.
+\begin{equation}
+K(z_t,y_c,y_s)=\frac{p(y_s|z_t)}{p(y_c|z_t)+p(y_s|z_t)}
+\end{equation}
+The noise predicted by our method is:
+\begin{equation}
+\begin{split}
+\epsilon_\theta(z_t,y_c,y_s)=\epsilon_\theta(z_t,t)+\alpha(\epsilon_\theta(z_t,t,y_c)-\epsilon_\theta(z_t,t))\\
++\beta K(z_t,y_c,y_s)(\epsilon_\theta(z_t,t,y_s)-\epsilon_\theta(z_t,t))
+\end{split}
+\end{equation}
+where:
+\begin{gather}
+K(z_t,y_c,y_s)=\frac{u_2}{u_1+u_2}\\
+u_1=\frac{1}{\sqrt \alpha_t}z_t-\frac{1-\alpha_t}{\sqrt \alpha_t \sqrt {1-\overline \alpha_t}}\epsilon_\theta(z_t,t,y_c)\\
+u_2=\frac{1}{\sqrt \alpha_t}z_t-\frac{1-\alpha_t}{\sqrt \alpha_t \sqrt {1-\overline \alpha_t}}\epsilon_\theta(z_t,t,y_s)
+\end{gather}
+We provide detailed derivation in Section 6.1.2.
+
+To better understand how $K$ changes at different denoising timesteps, we conduct a toy experiment using 50 steps for DDIM sampling. We used ChatGPT to randomly generate 100 style descriptions and 100 content descriptions, pairing them together to create the descriptions for generating images. During the image generation process, we recorded the changes of self-adaptive factor $k$. Figure 4 shows the average variation trend of $K$.
+As shown in Figure 4, we observe that $K$ varies significantly during the middle timesteps (from 15 to 35). We hypothesize that this is because the diffusion model generates images from low to high-frequency details, with the middle stages producing more structured features. The gradient difference between the content and style prompts is largest during this period. This finding aligns with the conclusion in \cite{DBLP:journals/tog/ZhangDTHHMLDX23}.
+
+\subsection{Texture Enhance Module}
+The output produced by ACC shows the coarse style characteristics of the style prompt but lacks finer details such as brush strokes. To tackle this limitation, we introduce a Texture Enhancement Module (TEM). This module guides the diffusion model towards enhancing texture by computing patchwise losses using the CLIP model (\cite{radford2021learning}) and incorporating gradients into the denoised image at each time step.
+
+\begin{figure}[!htbp]
+\centerline{\includegraphics[width=\columnwidth]{fig6.pdf}}
+\caption{Qualitative Results with Different Training Strategy}
+\label{fig}
+\end{figure}
+
+The patchwise loss function is mainly motivated by \cite{DBLP:conf/cvpr/KwonY22}. Let $I_{adc}$ represent the image stylized by adaptive control. $vae(.)$ denotes the VAE encoder (\cite{DBLP:conf/nips/RazaviOV19,DBLP:journals/corr/abs-2104-10157}), and $vae^{-1}(.)$ denotes its inverse operation.$E_I$ and $E_T$ are the image and text encoders of CLIP, respectively. $aug(.)$  signifies random geometrical augmentations such as cropping, flipping, and perspective transformations. $\tau$ denotes the threshold value, and $N$ represents the number of patches. The patchwise loss function is defined as follows:
+
+\begin{equation}
+\Delta T=E_T(y_s)-E_T(y_c)
+\end{equation}
+
+\begin{equation}
+\Delta I=E_I(aug(vae^{-1}\frac{(z_t-\sqrt{1-\overline{\alpha}_t}\epsilon_{\theta}(z_t,t,y_c))}{\sqrt{\overline{\alpha}_t}}))-E_I(I_{adc})
+\end{equation}
+
+\begin{equation}
+l_{patch}^i=1-\frac{\Delta I \Delta T}{|\Delta I||\Delta T|}
+\end{equation}
+
+\begin{equation}
+L_{patch}=\frac{1}{N}max(l_{patch}^i,\tau)
+\end{equation}
+
+The ACC module and the TEM module work together during the diffusion model's sampling process. The score function of denoising process is the weighted sum of $\epsilon_\theta(z_t,y_c,y_s)$ and the gradient of the loss patch.
+
+
+\begin{equation}
+\begin{split}
+    \epsilon(z_t,y_c,y_s)=\epsilon_\theta(z_t,y_c,y_s)+\lambda \frac{\partial L_{patch}}{\partial z_t}
+\end{split}
+\end{equation}
+
+
+where $\lambda$ is a hyper-parameter to control the strength of TEM.
+We incorporate the DDIM strategy for the reverse sampling process. The denoised image $z_s$ is predicted by the function below.
+
+\begin{equation}
+\begin{split}
+    \hat z_s=\sqrt {\overline \alpha_s}\frac{z_t-\sqrt {1-\overline \alpha_t}\epsilon(z_t,y_c,y_s)}{\sqrt {\overline \alpha_t}}
+\\+\sqrt{1-\overline \alpha_s}\epsilon(z_t,y_c,y_s)+\lambda \frac{\partial L_{patch}}{\partial z_t}
+\end{split}
+\end{equation}
+
+In image-to-image scenarios, we employ the Gram matrix (\cite{DBLP:journals/corr/GatysEB15a}) as a substitute for the patchwise loss function.
+
+\begin{table}
+\begin{center}
+\caption{Quantitative Results with Different Training Strategy}
+\label{tab1e}
+\begin{tabular}{p{3.2cm} r{1.7cm} r{1.7cm}}
+\hline
+ & Clip Score & Aesthetic Score \\
+\hline
+Stable Diffusion & 32.5 & 5.17\\
+\hline
+U-Net & 28.67 & 5.14 \\
+\hline
+LoRA & 29.29 & 5.18 \\
+\hline
+SDFT & \textbf{32.68} & \textbf{5.24} \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Result}
+\subsection{Experiment Setting}
+So far, the most state-of-the-art Stable Diffusion is 3.5. However, because most comparison methods  we use in this paper are based on Stable Diffusion 1.5, so Stable Diffusion 1.5 is adopted in our model for consistency and comparability. We use the DDPM strategy for forward noise processing and the DDIM method for reverse sampling, 50 steps total for DDIM sampling. In the Score Distillation based Fine-tune approach, we utilize the Laion-Aesthetics dataset, a subset of Laion-5B (\cite{DBLP:conf/nips/SchuhmannBVGWCC22}). For training the art diffusion model, we employ the WikiArt and ChinArt datasets, resizing all images to 512x512 for compatibility with diffusion models. In the Adaptive Conditional Control, we set $\alpha$ and $\beta$ to 7.5 for default. In the Texture Enhance Module (TEM), we set $\tau$ to 0.2 and randomly crop 16 patches from a source image, followed by flip and perspective augmentation. We add the Clip or Gram gradient in steps $(35,50)$ and set ACC in steps $(10,50)$ when the total step of DDIM is 50.
+
+\subsection{Comparison Studies}
+Figure 5 shows that our method achieves outstanding
+results across various artistic styles. Users can control styles by using different prompts. In Figure 5, the styles are controlled by artist name (Monet, Van Gogh, Kandingsky, Picasso), school of art (Cubism, Collaborative, Ukiyoe, Pop Art) and drawing tool (Crayon, Watercolor, Color Pencil, Pen drawing). In addition, we perform comparisons with diffusion-based image editing methods and style transfer methods, respectively.
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=\linewidth]{fig7.pdf}}
+\caption{Comparison with Diffusion-based image editing methods}
+\label{fig}
+\end{figure}
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=\linewidth]{fig8.pdf}}
+\caption{Comparison against text-driven style transfer methods}
+\label{fig}
+\end{figure}
+
+
+\subsubsection{The Effect of Score Distillation based Fine-tune}
+
+To assess the efficacy of our Score Distillation based Fine-tune module, we perform a comparative analysis across four models: the original Stable Diffusion model (first row), the model trained using the entire U-Net (second row), the model fine-tuned with LoRA (third row) and our proposed model (fourth row). The qualitative results are shown in Figure 6. Due to a lack of sufficient training parameters, LoRA is unable to effectively comprehend the stylistic semantics. In the generated image prompted by "a pen drawing of a street, a sketch", the result resembles a pencil drawing, lacking the distinctive stroke style of a pen. Although training the entire U-Net model can achieve the desired stylistic effect, it suffers from catastrophic forgetting, leading to structural distortions in the artwork. For example, as illustrated in the second row, second column, the street structure shows notable distortion.
+
+We also perform a quantitative analysis, where the CLIP score measures the similarity between the prompt and the generated image, while the aesthetic score, trained on the Laion Dataset, serves as an approximation of average aesthetic human preference for an image, a metric commonly used in the SD web UI. The results, presented in Table 2, demonstrate that our method achieves the highest CLIP score and aesthetic value.
+
+\begin{table}
+\begin{center}
+\caption{Quantitative results for comparison with
+Diffusion-based image editing methods for stylization. The bold text refer to the best result.}
+\label{tab1}
+\begin{tabular}{p{1.7cm} r{1.7cm} r{1.7cm} r{1.7cm}}
+\hline
+Method & Clip Score$\uparrow$ & SSIM$\uparrow$ & Aesthetic Score$\uparrow$\\
+\hline
+Prompt2Prompt & 32.71 & 0.322 & 5.74\\
+\hline
+Stable Artist & 23.58 & 0.580 & 5.16\\
+\hline
+Instruct Pix2Pix & 20.63 & 0.519 & 5.54\\
+\hline
+CLIPStyler & 22.49 & 0.219 & 5.86\\
+\hline
+ZeCon & 20.60 & 0.174 & 5.26\\
+\hline
+Ours & \textbf{34.54} & \textbf{0.624} & \textbf{6.03}\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}
+\begin{center}
+\caption{Comparison on the computational complexity of different models, where the symbol "-" denotes no need for data preparation or training. The bold text refer to the best result.}
+\label{tab1}
+\begin{tabular}{p{0.8cm} r{0.8cm} r{0.8cm} r{0.8cm}}
+\hline
+Method & Train Param & Training time & Inference time\\
+\hline
+Prompt2Prompt & - & - & 24s\\
+\hline
+Stable Artist & - & - & 20s\\
+\hline
+Instruct Pix2Pix & - & - & 18s\\
+\hline
+CLIPStyler & 615K & 131s & 131s\\
+\hline
+ZeCon & - & - & 182s\\
+\hline
+ArtBank & 124.6M & >1 h & \textbf{13.29s}\\
+\hline
+LSAST & 300.1M & >1 h & 17.85s\\
+\hline
+Ours+ACC & - & - & 16s\\
+\hline
+Ours+ACC+TEM & - & - & 84s\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\subsubsection{Comparison with Diffusion-based image editing methods}
+For Diffusion-based image editing methods, we compare three state-of-the-art methods (Prompt-to-Prompt (\cite{DBLP:conf/iclr/HertzMTAPC23})(\cite{DBLP:journals/corr/abs-2212-06013}) and Instruct Pix2Pix (\cite{DBLP:conf/cvpr/BrooksHE23}). The outcomes of the comparison are depicted in Figure 7. Our proposed model demonstrates superior performance in stylization while preserving content. Stable Artist and Prompt-to-Prompt exhibit distorted outcomes. As shown in Figure 7, the structure of the castle is altered after stylization (the second row in Figure 7). Stable Artist induces some deformation to appearance of a woman into the sketch style (the first row). It is more serve in Prompt-to-Prompt method that the face of the lady is totally changed.
+
+Although Instruct Pix2Pix shows improved feature preservation, it encounters challenges in stylization. For instance, when stylized with the Van Gogh style, the result lacks the typical colors and textures of Van Gogh's paintings.
+In contrast, our proposed approach effectively transfers intricate style features without sacrificing structural details. Furthermore, our method produces outputs with reasonable shape deformation and texture. 
+
+\begin{figure*}[htbp]
+\centerline{\includegraphics[width=\linewidth]{fig9.pdf}}
+\caption{Comparison against image-driven style transfer methods}
+\label{fig}
+\end{figure*}
+
+
+\subsubsection{Comparison with Text-driven Style Transfer methods}
+We compared our method with two text-driven style transfer methods, CLIPstyler (\cite{DBLP:conf/cvpr/KwonY22}), ZeCon (\cite{DBLP:conf/iccv/YangHY23}).
+The findings are depicted in Figure 8. Both CLIPstyler and ZeCon prove less effective when applied to style transfer tasks involving geometric features. As illustrated in Figure 8, the child's drawing exhibits not only vibrant colors but also irregular lines and shapes, necessitating consideration of both texture and geometry style transfer. However, the outcomes generated by CLIPstyler and ZeCon fall short in capturing these shape distortions. Additionally, ZeCon struggles to interpret semantic style information, resulting in a failure to replicate strokes and brushwork. Notably, Monet is celebrated for the diversity and vibrancy of his brushstrokes, yet ZeCon's results lack these distinctive strokes, as evident in the second row of Figure 8.
+
+In contrast, our proposed method effectively balances shape and texture style transfer, showing a superior comprehension of style. Within the realm of diffusion models, our method emerges as a more effective approach for style control compared to alternative style transfer methods.
+
+We also conducted quantitative comparisons to demonstrate the effectiveness of our approach. SSIM (\cite{DBLP:journals/tip/WangBSS04}) computes the structural likeness between style and generated images. These results are presented in Table 3. Our method preserves the optimal content structure while delivering satisfactory stylization. The outcomes reveal that our method achieves the highest aesthetic value.
+
+\subsubsection{Comparison with Image-driven Style Transfer methods}
+
+We tested our method against five SOTA style transfer algorithms (AdaAttN (\cite{DBLP:conf/iccv/LiuLHLWLSLD21}),  CCPL (\cite{DBLP:conf/eccv/WuZDB22}), MicroAST (\cite{DBLP:conf/aaai/WangZZL0XL23}, ArtBank (\cite{DBLP:conf/aaai/ZhangZXLZSLLHL24}) and LSAST(\cite{DBLP:conf/ijcai/ZhangZL0MHXLL0Z24})). The results are shown in Figure 9. CNN-based methods (AdaAttN, CCPL and MicroAST) fail to control shape changes or convey elements. Our method, however, can transfer high-level attributes, such as shapes and details of objects. For example, the style image of the first row is from Amedeo Modigliani. The women in his paintings have extremely slender bodies, the long neck and and small eyes. Our method preserved these characteristics well. ArtBank and LSAST are pre-trained diffusion based artistic style transfer methods. They can capture detailed style features, but take a long time to train.
+
+We also found that while our method can transfer colors to some extent, it may struggle when there's a big difference between the colors of the original image and the style image. For instance, the color of clothing in the second row wasn't transferred accurately. We think it is a common issue of the diffusion-based style transfer algorithms (The same issue occurred in ArtBank and LSAST) and it has been discussed in \cite{DBLP:conf/cvpr/ZhangHTHMDX23}.
+
+\subsubsection{Time Efficiency}
+In terms of computational time, our approach demonstrates a notable speed advantage over other methods, as illustrated in Table 4.
+
+\begin{figure}[!htbp]
+\centerline{\includegraphics[width=\columnwidth]{fig10.pdf}}
+\caption{Ablation study on ACC and TEM}
+\label{fig}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centerline{\includegraphics[width=\columnwidth]{fig11.pdf}}
+\caption{Ablation study on the TEM weight}
+\label{fig}
+\end{figure}
+
+\subsection{Ablation studies}
+
+Our method consists of two main components: Adaptive Conditional Control (ACC) and Texture Enhance Module (TEM). To evaluate their effectiveness, we conducted experiments. We removed ACC and TEM separately and compared the outcomes with our final result. In Figure 10, We found that removing ACC caused a loss of structural details, but the overall shape remained. For instance, in the TEM column of the second row, the shape of the lawn altered noticeably under stylization. Conversely, ACC managed to transfer the overall style but struggled with transferring detailed strokes and textures, as seen in the first row where water stains and smudging effects were enhanced by TEM. We found that the texture enhancement is very important for texture-based painting genres, such as oil painting, watercolor painting, etc. These findings indicate that ACC and TEM alone are insufficient for preserving the intricate details of the content and transferring fine-grained style information.
+
+We also performed another ablation experiment to examine the effect of factor $\lambda$ in Eqn. 20. This factor controls how strong the TEM is. We displayed the results in Figure 11. We noticed that as we increased $\lambda$, the images become more stylized. However, there's a risk of distorting local content. We discovered that a value of $\lambda=0.02$ works well for oil, pen, and pencil paintings, while $\lambda=0.05$ is better for watercolor paintings.
+
+More results are listed in the supplementary material.
+
+\section{Conclusion}
+We introduced the Art Creator for guiding artwork generation in diffusion models. By fine-tuning diffusion models using the ChinArt and WikiArt Datasets, we transformed them from the realm of photos to that of art. Our approach incorporates two key components: Adaptive Conditional Control (ACC) for directing the diffusion process along style, and a Texture Enhancement Module (TEM) for adding intricate strokes and brushes. It's flexible, working with both text and image-guided stylization. We showcased its ability to offer precise control over the style and its potential for tasks like image translation and manipulation.
+
+\section{Derivation and More Results}
+\subsection{Derivation}
+\subsubsection{Score Distillation based Fine-tune}
+The concept of score distillation draws inspiration from previous research on probability density distillation (\cite{DBLP:conf/uai/HuangAKLC19,DBLP:conf/iclr/PingPC19,DBLP:conf/icml/OordLBSVKDLCSCG18,DBLP:conf/iclr/PooleJBM23}). It is similar to distillation, but uses score functions instead of densities. This loss function helps retain the knowledge of pre-trained diffusion model. This section outlines the derivation of Equation 5, starting with an analysis of the KL term.
+
+\begin{equation}
+    L_{SD}=KL(p_{\theta_1}(z_{t-1}|z_t,y)||p_{\theta_2}(z_{t-1}|z_t,y))
+\end{equation}
+where $p_{\theta_1}(z_{t-1}|z_t,y) \sim \mathcal N(u_1,\sigma^2I)$ and $p_{\theta_2}(z_{t-1}|z_t,y) \sim \mathcal N(u_2,\sigma^2I)$. 
+
+The KL divergence of two n-dimensional normal distributions ($p_1 \sim \mathcal N(u_1,\Sigma_1)$,$p_2 \sim \mathcal N(u_2,\Sigma_2)$) can be calculated by the formula below:
+\begin{equation}
+\begin{split}
+    KL(p_1||p_2)=\frac{1}{2}(log\frac{|\Sigma_2|}{|\Sigma_1|}-n+
+    tr(\Sigma_2^{-1}\Sigma_1)\\+(u_2-u_1)^T\Sigma_2^{-1}(u_2-u_1))
+\end{split}
+\end{equation}
+
+The KL divergence of $p_{\theta_1}(z_{t-1}|z_t,y)$ and $p_{\theta_2}(z_{t-1}|z_t,y)$ can be denoted as:
+\begin{equation}
+\begin{split}
+    KL(p_{\theta_1}(z_t|z_{t-1},y)||p_{\theta_2}(z_t|z_{t-1},y))\\
+=\frac{1}{2}(-n+n+\frac{1}{\sigma^2}(u_2-u_1)^T(u_2-u_1))\\
+=\frac{1}{2\sigma^2}(u_2-u_1)^T(u_2-u_1)
+\end{split}
+\end{equation}
+In diffusion models, the mean parameters $u_1$ and $u_2$ correspond to the score function.
+\begin{equation}
+\begin{split}
+u_1=\frac{1}{\sqrt \alpha_t}z_t-\frac{1-\alpha_t}{\sqrt \alpha_t \sqrt {1-\overline \alpha_t}}\epsilon_\theta(z_t,t,y)\\
+u_2=\frac{1}{\sqrt \alpha_t}z_t-\frac{1-\alpha_t}{\sqrt \alpha_t \sqrt {1-\overline \alpha_t}}\epsilon_\theta(z_t,t,y)
+\end{split}
+\end{equation}
+Putting these together, KL divergence between teacher model and student model is:
+\begin{equation}
+\begin{split}
+KL(p_{\theta_1}(z_t|z_{t-1},y)||p_{\theta_2}(z_t|z_{t-1},y))
+=\frac{(1-\alpha_t)^2}{\alpha_t(1-\overline \alpha_t)}\\||\epsilon_{\theta_1}(z_t,t,y)-\epsilon_{\theta_2}(z_t,t,y)||_2^2
+\end{split}
+\end{equation}
+
+\subsubsection{Adaptive Conditional Control (ACC)}
+The motivation behind Adaptive Conditional Control (ACC) is inspired by classifier-free guidance (CFG).  It is a method to balance diversity and fidelity in conditional diffusion models.
+
+\begin{equation}
+p(z_t|z_{t-1},y) \propto p(z_t|z_{t-1})p(y|z_{t})^w
+\end{equation}
+$p(z_t|z_{t-1})$ is the unconditional probability and $p(y|z_{t})$ is the classifier probability. $w$ is the scale facotr. This single-conditional CFG can be extended to multiple conditions by providing multiple condtions.
+\begin{equation}
+\begin{split}
+    \bigtriangledown_{z_t} log p(z_{t-1}|z_t,y_c,y_s) 
+    \\
+    = \bigtriangledown_{z_t} logp(z_{t-1}|z_t) +\alpha \bigtriangledown_{z_t}logp(y_c|z_{t})\\  + \beta\bigtriangledown_{z_t} logp(y_s|z_t)\\
+    =(1-\alpha-\beta)\bigtriangledown_{z_t}logp(z_{t-1}|z_t)\\+\alpha\bigtriangledown_{z_t}logp(z_t|y_c)+\beta\bigtriangledown_{z_t}logp(z_t|y_s)
+\end{split}
+\end{equation}
+The noise predicted with two conditions is:
+\begin{equation}
+\begin{split}
+\epsilon(z_t,t,y_c,y_s)=(1-\alpha-\beta)\epsilon_\theta(z_t,t)+\\ \alpha\epsilon_\theta(z_t,t,y_c)
++\beta\epsilon_\theta(z_t,t,y_s)
+\end{split}
+\end{equation}
+The adaptive control is based on two-conditional CFG, but adding a self-adaptive factor to avoid wrong score prediction.
+\begin{equation}
+p(z_{t-1}|z_t,y_c,y_s) \propto p(z_{t-1}|z_t)p(y_c|z_{t})^\alpha p(y_s|z_t)^{\beta K(z_t,y_s,y_c)}
+\end{equation}
+$K(z_t,y_s,y_c)$ is the adaptive factor. Now we deduce the Eqn. 13.
+\begin{equation}
+\begin{split}
+K(z_t,y_s,y_c)=\mathbb{E}_{z_t,y_c,y_s}[\frac{p(y_s|z_t)}{p(y_c|z_t)+p(y_s|z_t)}]\\
+=\mathbb{E}_{z_t,y_c,y_s}[(\frac{p(y_s)p(z_t|y_s)}{p(y_c)p(z_t|y_c)+p(y_s)p(z_t|y_s)}]
+\end{split}
+\end{equation}
+The probabilities $p(y_c)$ and $p(y_s)$ represent the likelihood of occurrence of the content prompt and style prompt, respectively. One method to compute these probabilities is by calculating the occurrence rate of words in the training set, but this approach can be highly time-consuming. Additionally, high-frequency words may dominate the probability distribution, resulting in near-zero probabilities for other words. Hence, we simplify the computation by counting number of words in the prompt, which has been found to yield satisfactory results.
+
+Because $p(z_t|y_s) \sim \mathcal N(u_1,\sigma^2 I)$,$p(y_c)p(z_t|y_c)+p(y_s)p(z_t|y_s) \sim \mathcal N(p(y_c)u_1+p(y_s)u_2,(p(y_c)^2+p(y_s)^2)\sigma^2 I)$. The division of two normal distributions with different variation is not a distribution density and this expectation is intractable. We take a approximation.
+\begin{equation}
+K(z_t,y_s,y_c) \approx \frac{\mathbb{E}_{z_t,y_s}[p(y_s)p(z_t|y_s)]}{\mathbb{E}_{z_t,y_c,y_s}[p(y_c)p(z_t|y_c)+p(y_s)p(z_t|y_s)]}
+\end{equation}
+The result is:
+\begin{equation}
+K(z_t,y_s,y_c) \approx \frac{p(y_s)u_2}{p(y_c)u_1+p(y_s)u_2}
+\end{equation}
+where
+\begin{gather}
+u_1=\frac{1}{\sqrt \alpha_t}z_t-\frac{1-\alpha_t}{\sqrt \alpha_t \sqrt {1-\overline \alpha_t}}\epsilon_\theta(z_t,t,y_c)\\
+u_2=\frac{1}{\sqrt \alpha_t}z_t-\frac{1-\alpha_t}{\sqrt \alpha_t \sqrt {1-\overline \alpha_t}}\epsilon_\theta(z_t,t,y_s)
+\end{gather}
+
+\subsection{Pseudocode}
+\subsubsection{Score Distillation based Fine-tune (SDFT)}
+\begin{algorithm}
+\begin{algorithmic}
+    \REQUIRE model weights $\theta$.
+    \ENSURE $N \geq 1$.
+    \STATE DM-teacher $\gets$ init diffusion models with $\theta$
+    \STATE DM-student $\gets$ init diffusion models with $\theta$
+    \STATE DM-teacher.requires-grad(False)
+    \REPEAT  
+    \STATE $(x_1,c_1)$ $\gets$ $p_{laion}(x,c)$
+    \STATE $(x_2,c_2)$ $\gets$ $p_{WikiArt+ChinArt}p(x,c)$
+    \FOR{i in range($N$)}
+    \STATE DDPM training for DM-student
+    \ENDFOR
+    \STATE $z_0$ $\gets$ DM.encode-image($x_2$)
+    \STATE $y$ $\gets$ DM.encode-text($c_2$)
+    \STATE $\epsilon \sim \mathcal N (0,I) $
+    \STATE $z_t$ $\gets$ $\sqrt {\overline \alpha_t}z_0+\sqrt {1-\overline \alpha_t}\epsilon$
+    \STATE $\epsilon_t$ $\gets$ DM-tearcher.predict-noise($z_t$,$t$,$y_s$)
+    \STATE $\epsilon_s$ $\gets$ DM-student.predict-noise($z_t$,$t$,$y_s$)
+    \STATE take gradient step on $\bigtriangledown_\theta \frac{(1-\alpha_t)^2}{\alpha_t(1-\overline \alpha_t)}||\epsilon_t-\epsilon_s||_2^2$
+    
+    \UNTIL {converged}
+\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Adaptive Conditional Control (ACC)}
+\begin{algorithm}
+    \begin{algorithmic}
+       \REQUIRE model weights $\theta$, content condition $text_c$, style texts 
+ $text_s$. previous seed $s$.
+       \ENSURE $\alpha \in [1,15]$,$\beta \in [1,15]$, $t\in[1,T]$.
+       \STATE DM $\gets$ init diffusion model with $\theta$
+       \STATE $y_c$ $\gets$ DM.encode-text($text_c$)
+       \STATE $y_s$ $\gets$ DM.encode-text($text_s$)
+       \STATE $latent$ $\gets$ random.normal(latent-shape,seed=$s$)
+       \WHILE{$t \neq 0$} 
+       \STATE $\epsilon$ $\gets$ DM.predict-noise($latent$,$t$)
+       \STATE $\epsilon_c$ $\gets$ DM.predict-noise($latent$,$t$,$y_c$)
+       \STATE $\epsilon_s$ $\gets$ DM.predict-noise($latent$,$t$,$y_s$)
+       \STATE $u_1$ $\gets$ $\frac{1}{\sqrt \alpha_t}latent-\frac{1-\alpha_
+       
+       
+       t}{\sqrt \alpha_t \sqrt {1-\overline \alpha_t}}\epsilon_c$ 
+       \STATE $u_2$ $\gets$ $\frac{1}{\sqrt \alpha_t}latent-\frac{1-\alpha_t}{\sqrt \alpha_t \sqrt {1-\overline \alpha_t}}\epsilon_s$ 
+       \STATE $K$ $\gets$ $\frac{u_2}{u_1+u_2}$
+       \STATE $\overline{\epsilon}$ $\gets$ $\epsilon$+\alpha($\epsilon_c$-$\epsilon$)+$\beta K$($\epsilon_s$-$\epsilon$)
+       \STATE $latent$ $\gets$ DM.update-latents($latent$,$\overline{\epsilon}$)
+       \STATE $t$ $\gets$ $t-1$
+       \ENDWHILE
+    \STATE $image$ $\gets$ DM.decode-image($latent$)
+    \end{algorithmic}
+\end{algorithm}
+
+\subsection{Additional Experimental Results}
+\subsubsection{Image manipulation}
+
+\begin{figure}
+\centerline{\includegraphics[width=\columnwidth]{fig12.pdf}}
+\caption{Image edition results}
+\label{fig}
+\end{figure}
+
+\caption{Image edition results}
+Our proposed approach demonstrates proficiency not only in style control but also exhibits promise for other applications like image translation and manipulation. Illustrated in Figure 12 are qualitative outcomes for image translation. ur method effectively changes images based on given prompts, while preserving details and maintaining overall consistency. For instance, alterations to facial expressions, as depicted in the second row of Figure 12, and modifications to the appearance of a car, as shown in the first row, are achieved without compromising the integrity of the images. These findings underscore the versatility of our method across diverse image manipulation tasks. 
+\label{fig}
+\end{figure}
+
+\subsubsection{Chinese Painting Generation}
+\begin{figure*}
+\centerline{\includegraphics[width=\linewidth]{fig13.pdf}}
+\caption{Chinese artwork generation result by our method}
+\label{fig}
+\end{figure*}
+
+We show how well our model can create Chinese artworks in Figure 13. Using the ChinArt dataset, our method can produce different types of Chinese paintings, like Ink painting, ink and wash painting, and Dunhuang murals style. It can even recognize the unique painting styles of different artists, such as Wu Guanzhong and Qi Baishi. 
+
+\subsubsection{Any style Generation}
+\begin{figure*}
+\centerline{\includegraphics[width=\linewidth]{fig14.pdf}}
+\caption{Additional results on style prompts of various painting tools}
+\label{fig}
+\end{figure*}
+
+\begin{figure*}
+\centerline{\includegraphics[width=\linewidth]{fig15.pdf}}
+\caption{Additional results on style prompts of various artist}
+\label{fig}
+\end{figure*}
+
+\begin{figure*}
+\centerline{\includegraphics[width=\linewidth]{fig16.pdf}}
+\caption{Additional results on style prompts of various art genres}
+\label{fig}
+\end{figure*}
+
+\begin{figure*}
+\centerline{\includegraphics[width=\linewidth]{fig17.pdf}}
+\caption{Additional results on style prompts of various materials}
+\label{fig}
+\end{figure*}
+We provide more results to show how well our model can handle different styles. Users can control the style using prompts like artist names, types of art, painting tools, etc. In Figure 14, you can see the results we use different painting tools on the same source. Figure 15 shows the results when the artist is changed, and Figure 16 shows the outcome when switching the art genre. 
+
+\subsection{Discussions and Limitations}
+Despite strengths of our method, it has limitations. Firstly, it's a post-editing method for stylization and support for images generated by the diffusion models.
+We have attempted to extend its application beyond T2I model by combining our method with inversion techniques like those proposed in \cite{DBLP:conf/iclr/GalAAPBCC23} and \cite{DBLP:conf/cvpr/MokadyHAPC23}. But it does not work very well. Secondly, in the image-driven style task, it has difficulties transferring color when these is a big color difference between the content and style image. Overcoming these challenges will be a key area of focus in our future research.
+
+\clearpage
+
+% To print the credit authorship contribution details
+%\printcredits
+
+%% Loading bibliography style file
+%\bibliographystyle{model1-num-names}
+\bibliographystyle{cas-model2-names}
+
+% Loading bibliography database
+\bibliography{main}
+
+% Biography
+%\bio{}
+% Here goes the biography details.
+%\endbio
+
+%\bio{pic1}
+% Here goes the biography details.
+%\endbio
+
+\end{document}
+
